@@ -1,0 +1,156 @@
+.saarlift {
+  text-align: center;
+  padding: 80px 40px;
+  border-radius: 20px;
+  background-color: #e0e0e0; /* Background color for the entire section */
+  /* Add your background image here if needed */
+  background-size: cover; /* This will cover the entire container with the background image */
+  background-position: center; /* This will center the background image */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 70px;
+  color: #000000; /* Text color set to black */
+}
+.saarlift-service-card {
+  max-width: 800px; /* Adjust the width as needed */
+  color: #000;
+}
+
+/* Rest of your CSS styles */
+
+.saarlift-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px; /* Increase the top margin */
+  color: #000;
+}
+
+.saarlift-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 40px;
+  background-color: #f0f0f0; /* Background color for the card */
+  border-radius: 20px; /* Rounded corners for the card */
+  box-shadow: 10px 10px 20px #d0d0d0, -10px -10px 20px #ffffff; /* Neumorphic shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+}
+.bilderbtn{
+  color: rgb(182, 111, 39);
+  font-size: 20px;
+  
+}
+.saarlift-card:hover {
+  box-shadow: 6px 6px 10px #b0b0b0, -6px -6px 10px #ffffff; /* Hover effect */
+}
+
+.saarlift-image img {
+  width: 100%;
+  height: auto; /* Set a fixed height for uniformity */
+  max-height: 400px;
+  /* Optionally set a fixed width (e.g., width: 300px;) */
+  max-width: 300px;
+ 
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 20px; /* Increase spacing between title and description */
+  color: #000; /* Text color set to black */
+}
+
+.contact-info {
+  font-size: 18px;
+  margin-top: 40px; /* Increase spacing from the previous section */
+  color: #000; /* Text color set to black */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.header {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.header img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+footer {
+  color: white;
+  margin-top: 20vh;
+  z-index: 500;
+  width: auto;
+  min-width: 40em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  background-color: #f0f0f0; /* Background color for the card */
+  border-radius: 20px; /* Rounded corners for the card */
+  box-shadow: 10px 10px 20px #d0d0d0, -10px -10px 20px #ffffff; /* Neumorphic shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+  position: relative;
+}
+a {
+  color: inherit; /* Change the color to the color of the parent element */
+  text-decoration: none; /* Remove the underline */
+}
+.col {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2em;
+  width: 28%;
+}
+
+
+.col2, .col3 {
+  color: #000000;
+
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --m: 3rem;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  footer {
+    width: 70%;
+    flex-direction: column;
+    padding: 5rem 20vw;
+  }
+ 
+}

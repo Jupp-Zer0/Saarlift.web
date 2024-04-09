@@ -1,0 +1,62 @@
+<!-- <mat-toolbar color="primary">
+    <a class="logo-link" [routerLink]="['/main']">
+        <img src="../../assets/images/hub.png" alt="Logo" style="height: 40px;">
+    </a>
+    <span class="spacer"></span>
+    <button mat-button class="styled-button" [routerLink]="['/login']">Login</button>
+    <button mat-button class="styled-button" [routerLink]="['/register']">Register</button>
+    <button mat-button class="styled-button" [routerLink]="['/account']" *ngIf="authService.isLoggedIn()">Account</button>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+    <router-outlet> </router-outlet>
+</mat-sidenav-container> -->
+
+
+
+<nav>
+    <div class="info">
+      <p>Folio Vol. 1</p>
+    </div>
+    <div class="logo">
+      <a href="/">
+        <img src="../../assets/images/hub.png" alt="Logo">
+      </a>
+    </div>
+    <div class="toggle-btn">
+      <button
+        class="burger"
+        #burgerButton
+        (click)="toggleMenu()"
+      ></button>
+    </div>
+  </nav>
+  <div class="overlay">
+    <div class="overlay-menu">
+      <div class="menu-item">
+        <div class="menu-item-name">
+          <p id="active"><a href="#">Anmelden </a></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">
+          <p><a href="#">Work</a></p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">
+          <p><a href="#">About</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-nav">
+      <p><a href="#">Twitter</a></p>
+      <p>·</p>
+      <p><a href="#">Instagram</a></p>
+      <p>·</p>
+      <p><a href="#">Dribble</a></p>
+      <p>·</p>
+      <p><a href="#">Behance</a></p>
+    </div>
+  </div>

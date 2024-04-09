@@ -1,0 +1,77 @@
+<div *ngIf="isLoggedIn">
+    <mat-card class="account-card">
+      <mat-card-header>
+        <mat-card-title>Account</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <div *ngIf="user">
+          <mat-card-subtitle>Willkommen, {{ user.name }}</mat-card-subtitle>
+          <h3>Deine Email ist: {{ user.email }}</h3>
+          <h3>Deine ID ist : {{user.id}}</h3>
+        
+         
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="logout()">Logout</button>
+      </mat-card-actions>
+    </mat-card>
+
+
+
+    <div *ngIf="isLoggedIn">
+      <mat-card class="account-card">
+        <mat-card-header>
+          <mat-card-title>Termin vereinbaren</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="card-content">
+          <form (submit)="scheduleAppointment()">
+            <mat-form-field>
+              <mat-label>Dienstleistung</mat-label>
+              <mat-select [(ngModel)]="selectedService" name="service">
+                <mat-option *ngFor="let service of services" [value]="service">{{ service }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>gewünschten Zeitpunkt</mat-label>
+              <input matInput type="date" [(ngModel)]="appointmentDate" name="date" placeholder="Datum">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>gewünschten Uhrzeit</mat-label>
+              <input matInput type="time" [(ngModel)]="appointmentTime" name="time" placeholder="Uhrzeit">
+            </mat-form-field>
+            <!-- Add this block for notes input -->
+            <mat-form-field>
+              <textarea matInput [(ngModel)]="appointmentNotes" name="notes" placeholder="Beschreibung"></textarea>
+            </mat-form-field>
+            <!-- End of new block -->
+            <button mat-raised-button color="primary" type="submit">Termin vereinbaren</button>
+          </form>
+        
+        </mat-card-content>
+        
+      </mat-card>
+      <section class="meineTermine">
+        <h2>Meine Termine</h2>
+      <mat-card *ngFor="let appointment of appointments" class="appointment-card">
+        <mat-card-header>
+          <mat-card-title>{{ appointment.service }}</mat-card-title>
+          <mat-card-subtitle>{{ appointment.date }} in {{ appointment.time }} Uhr</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Notes: {{ appointment.notes }}</p>
+          <p [ngClass]="{
+            'status-pending': appointment.status === 'pending',
+            'status-accepted': appointment.status === 'accepted',
+            'status-rejected': appointment.status === 'rejected'
+          }">Status: {{ appointment.status }}</p>
+        </mat-card-content>
+      </mat-card>
+    </section>
+    </div>
+    
+
+  
+  <div *ngIf="!isLoggedIn">
+    <p>Sie sind nicht angemeldet , wir bitten sie dies zu tun, um diese Seite sehen zu können.</p>
+  </div>

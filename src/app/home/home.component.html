@@ -1,0 +1,49 @@
+<article class="saarlift">
+
+  <header class="header">
+      <img src="../../assets/images/bigp.png" alt="Header Image">
+  </header>
+
+  <section class="saarlift-card saarlift-service-card">
+    <div class="saarlift-details">
+      <h2>Hubsteiger</h2>
+      <p>
+        Wir bieten eine vielfahlt an Dienstmöglichkeiten mit einem Hubsteiger bis zu 24m
+      </p>
+    </div>
+  </section>
+
+  <section class="saarlift-info">
+    <article class="saarlift-card" *ngFor="let service of services">
+      <div class="saarlift-image">
+        <img [src]="service.image" alt="{{ service.title }}">
+      </div>
+      
+      <div class="saarlift-details">
+        <h2>{{ service.title }}</h2>
+        <p>{{ service.description }}</p>
+      </div>
+    </article>
+  </section>
+ <!-- <button mat-button class="bilderbtn" [routerLink]="['/galerie']">Weitere Bilder</button> -->
+<footer>
+
+  <section>
+    <div class="col">
+    <h2>Kontakt aufnehmen</h2>
+    <div class="contact-info">
+      <p>Email: metodi&#64;gmx.net</p>
+      <p>Telefon: +49 1781852771</p>
+    </div>
+  </div>
+  </section>
+
+  <div class="col col2">
+    <a routerLink="/datenschutz">Datenschutz</a>
+   
+  </div>
+</footer>
+
+</article>
+  
+  

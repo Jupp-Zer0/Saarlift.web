@@ -1,0 +1,71 @@
+.account-card {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  .meineTermine{
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+
+  }
+  .status-pending {
+    color: orange;
+  }
+  
+  .status-accepted {
+    color: green;
+  }
+  
+  .status-rejected {
+    color: red;
+  }
+  .appointment-card {
+  
+    margin: 5vh;
+  }
+  .snackbar-success {
+    background-color: green !important;
+    color: white !important;
+  }
+  
+  .snackbar-error {
+    background-color: red !important;
+    color: white !important;
+  }
+  .account-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .mat-card-header {
+    background-color: #3f51b5;
+    color: white;
+  }
+  
+  .mat-card-content {
+    color: #333;
+  }
+  
+  .mat-card-actions {
+    justify-content: center;
+  }
+
+  /* Styles for all mat-form-field elements */
+mat-form-field {
+  width: 100%; /* Full width */
+  margin-bottom: 16px; /* Add some margin at the bottom */
+}
+
+/* Styles for the input elements inside mat-form-field */
+mat-form-field input,
+mat-form-field textarea {
+  font-size: 16px; /* Change the font size */
+}
+
+/* Styles for the label elements inside mat-form-field */
+mat-form-field mat-label {
+  color: #3f51b5; /* Change the color */
+}

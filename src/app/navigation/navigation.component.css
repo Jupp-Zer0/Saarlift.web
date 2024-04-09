@@ -1,14 +1,4 @@
-.snackbar-success {
-    background-color: green;
-    color: white;
-  }
-  
-  .snackbar-error {
-    background-color: red;
-    color: white;
-  }
-
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,18 +17,14 @@
   }
   
   .website-content {
-    padding: 3.5vh;
-   
-    overflow: auto;
     position: fixed;
-    top: 50px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
-  
-
-   
+    background: #cdc6be;
+    padding: 2em;
   }
   
   .hero-img {
@@ -53,32 +39,26 @@
     height: 100%;
     object-fit: cover;
   }
-  header {
+  
+  nav {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    
     align-items: center;
-    
-    background-color: transparent;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 1.5em 2em;
+    color: #cdc6be;
+    mix-blend-mode: difference;
+    z-index: 2;
   }
   
-::-webkit-scrollbar-track {
-    background-color: #E0E0E0;
-  }
-  
-  
-  
-  header > div {
+  nav > div {
     flex: 1;
   }
-  .logo img {
-    height: 50px; /* Adjust as needed */
-    width: auto; /* Keep the aspect ratio */
-    margin-right: 1em; /* Add some space to the right */
-  }
+  
   .logo {
     text-align: center;
+    
     font-family: "Canopee";
   }
   
@@ -92,11 +72,8 @@
     font-size: 30px;
     color: #cdc6be;
   }
-  button {
-    overflow: hidden;
-  }
+  
   .toggle-btn {
- 
     display: flex;
     justify-content: flex-end;
   }
@@ -138,13 +115,11 @@
   .active.burger:before {
     transform: translateY(0) rotate(45deg);
   }
- 
+  
   .active.burger:after {
     transform: translateY(0) rotate(-45deg);
   }
-  body.menu-open {
-    overflow-y: hidden; /* Hide scrollbar when menu is open */
-  }
+  
   .overlay {
     position: fixed;
     top: 0;
@@ -155,7 +130,6 @@
     background: #141412;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     will-change: transform;
-  
   }
   
   .overlay-menu {
@@ -170,18 +144,14 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    overflow-y: hidden; /* Prevent scrollbar from appearing */
   }
   
   .menu-item {
     display: flex;
     cursor: pointer;
-    
-    /* Remove clip-path property */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
-  p{
-    overflow: hidden;
-  }
+  
   .menu-item p {
     position: relative;
     text-align: center;
@@ -190,7 +160,10 @@
     line-height: 80%;
     will-change: transform;
     transition: letter-spacing 0.3s;
-    overflow: hidden;
+  }
+  
+  .menu-item p:hover {
+    letter-spacing: 0.075em;
   }
   
   .menu-item p#active::after {
@@ -208,10 +181,8 @@
     color: #cdc6be;
     text-decoration: none;
   }
-  
-  p {
-  
-    height: auto;
+  .no-scroll {
+    overflow: hidden;
   }
   .sub-nav {
     position: absolute;
@@ -222,21 +193,7 @@
     gap: 0.5em;
     opacity: 0;
   }
-  nav,
-  .menu-item a,
-  .sub-nav p {
-    color: #4682b4; /* Blue color */
-  }
-  .burger:before,
-  .burger:after {
-    background: #4682b4; /* Blue color */
-  }
-
-  /* Update active menu item color */
-  .menu-item p#active::after {
-    background: #ffffff; /* White background */
-    /* You can adjust other properties if necessary */
-  }
+  
   .sub-nav p {
     font-family: "Canopee";
     font-size: 20px;
